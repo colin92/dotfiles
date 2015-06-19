@@ -1,0 +1,1 @@
+/Users/colinmeret/.bash_profile

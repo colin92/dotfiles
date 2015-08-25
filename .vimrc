@@ -26,7 +26,11 @@ nnoremap <C-L> :nohl<CR><C-L>
 hi Visual term=reverse cterm=reverse guibg=Grey
 
 " Convenient keybindings
+let mapleader = ","
+let maplocalleader = "\\"
 set pastetoggle=gP
+nnoremap <leader><C-E> :vsplit ~/.vimrc<CR>
+nnoremap <leader><C-W> :source ~/.vimrc<CR>
 
 " Convenient commands
 
@@ -42,8 +46,8 @@ map! <M-Esc>[64~ <S-ScrollWheelUp>
 map <M-Esc>[65~ <S-ScrollWheelDown>
 map! <M-Esc>[65~ <S-ScrollWheelDown>
 
-map gc :call Comment()<CR>
-map gC :call Uncomment()<CR>
+nnoremap gc :call Comment()<CR>
+nnoremap gC :call Uncomment()<CR>
 
 " Commenting and Uncommenting 
 " TODO Add html commenting through gc (find regex)

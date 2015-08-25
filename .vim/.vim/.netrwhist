@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/colinmeret/cedrus/dreamface/hackathon/comp'
+let g:netrw_dirhist_2='/Users/colinmeret/cedrus/practice/cmTable'
+let g:netrw_dirhist_3='/Users/colinmeret/Development/cthehardway/1ex'
+let g:netrw_dirhist_4='/Users/colinmeret/cedrus'
+let g:netrw_dirhist_5='/Users/colinmeret/utilities'
+let g:netrw_dirhist_6='/Users/colinmeret/.vim/bundle/nerdtree-git-plugin'
+let g:netrw_dirhist_7='/Users/colinmeret/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin'
+let g:netrw_dirhist_8='/Users/colinmeret'
+let g:netrw_dirhist_9='/Users/colinmeret/utilities'

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/vagrant/dev/ap110233-digital-managed-accounts/frontend/app'
+let g:netrw_dirhist_2='/home/vagrant/dev/ap110233-digital-managed-accounts/frontend/app/scripts'
+let g:netrw_dirhist_3='/home/vagrant/dev/ap110233-digital-managed-accounts/frontend/app/scripts/home'
+let g:netrw_dirhist_4='/home/vagrant/dev/ap110233-digital-managed-accounts/frontend/app/scripts/home/controllers'
+let g:netrw_dirhist_5='/home/vagrant/dev/ap110233-digital-managed-accounts/frontend/app/styles'

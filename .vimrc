@@ -28,9 +28,10 @@ hi Visual term=reverse cterm=reverse guibg=Grey
 " Convenient keybindings
 let mapleader = ","
 let maplocalleader = "\\"
-set pastetoggle=gP
 nnoremap <leader><C-E> :vsplit ~/.vimrc<CR>
 nnoremap <leader><C-W> :source ~/.vimrc<CR>
+nnoremap <leader>b :bn<CR>
+nnoremap <leader>p :bp<CR>
 
 " Convenient commands
 
@@ -105,4 +106,4 @@ set statusline+=%F
 " set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 " NERDTree config
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>

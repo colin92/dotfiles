@@ -1,0 +1,16 @@
+[user]
+  name = Colin Meret
+  email = colinmeret@gmail.com
+[push]
+        default = simple
+[color]
+        ui = true
+[alias]
+        st = status
+        pr = pull --rebase
+        co = checkout
+        fix = "!f() { vim `git diff --name-only | uniq`; }; f"
+
+[core]
+	editor = vim
+	excludesfile = /home/vagrant/.gitignore_global

@@ -8,6 +8,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+set backspace=indent,eol,start
 
 " Things to help me know where I am in the file (also keeping good form)
 set number
@@ -28,10 +29,21 @@ hi Visual term=reverse cterm=reverse guibg=Grey
 " Convenient keybindings
 let mapleader = ","
 let maplocalleader = "\\"
+" Edit .vimrc
 nnoremap <leader><C-E> :vsplit ~/.vimrc<CR>
+" Reload .vimrc
 nnoremap <leader><C-W> :source ~/.vimrc<CR>
-nnoremap <leader>b :bn<CR>
-nnoremap <leader>p :bp<CR>
+" toggle NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+" toggle :set paste
+nnoremap <leader>i :set paste!<CR>
+" list buffers
+nnoremap <leader>1 :buffers<CR>
+" toggle Syntastic
+nnoremap <leader>s :SyntasticToggleMode<CR>
+" toggle gundo
+nnoremap <leader>g :GundoToggle<CR>
+" do stuff ...
 
 " Convenient commands
 
@@ -106,4 +118,13 @@ set statusline+=%F
 " set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 " NERDTree config
-nnoremap <leader>n :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+
+" Syntastic config
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" jsx linting config
+let g:jsx_ext_required = 0

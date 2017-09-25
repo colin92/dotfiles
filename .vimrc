@@ -26,6 +26,12 @@ set hlsearch
 nnoremap <C-L> :nohl<CR><C-L>
 hi Visual term=reverse cterm=reverse guibg=Grey
 
+" help filetype based plugins
+filetype plugin on
+
+" Better comment formatting
+set formatoptions+=ro
+
 " Convenient keybindings
 let mapleader = ","
 let maplocalleader = "\\"
@@ -43,6 +49,14 @@ nnoremap <leader>1 :buffers<CR>
 nnoremap <leader>s :SyntasticToggleMode<CR>
 " toggle gundo
 nnoremap <leader>g :GundoToggle<CR>
+" convert to base64
+vnoremap <leader>b "zy:call ToBase()<CR>gv"ypkJJx
+" convert from base64
+vnoremap <leader>v "zy:call FromBase()<CR>gv"yp
+" copy to system clipboard
+nnoremap <leader>y :call system('pbcopy', @@)<CR>
+" copy to system clipboard
+vnoremap <C-x> y:call system('pbcopy', @@)<CR>gv
 " do stuff ...
 
 " Convenient commands
@@ -59,8 +73,22 @@ map! <M-Esc>[64~ <S-ScrollWheelUp>
 map <M-Esc>[65~ <S-ScrollWheelDown>
 map! <M-Esc>[65~ <S-ScrollWheelDown>
 
-nnoremap gc :call Comment()<CR>
-nnoremap gC :call Uncomment()<CR>
+" nnoremap gc :call Comment()<CR>
+" nnoremap gC :call Uncomment()<CR>
+
+" convert to base64
+function! ToBase() 
+  try
+    let @y = system('base64', @z)
+  endtry
+endfunction
+
+" convert from base64
+function! FromBase() 
+  try
+    let @y = system('base64 --decode', @z)
+  endtry
+endfunction
 
 " Commenting and Uncommenting 
 " TODO Add html commenting through gc (find regex)
@@ -120,11 +148,20 @@ set statusline+=%F
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
 
+" NERDCommenter config
+let g:NERDCompactSexyComs = 1
+let g:NERDSpaceDelims = 1
+
 " Syntastic config
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " jsx linting config
 let g:jsx_ext_required = 0
+
+" Devicons config
+set encoding=utf8
+set guifont=DroidSansMonoPLNerd:h12
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12

@@ -2,6 +2,7 @@
   st = status
   pr = pull --rebase
 	co = checkout
+  cam = commit -am 
   fix = "!f() { git diff --name-only | uniq ; } ; vi `f`"
 [core]
 	editor = vim

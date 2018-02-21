@@ -15,6 +15,11 @@ set number
 set ruler
 set colorcolumn=80
 
+" Add _ characters as word separater, useful for jumping in the middle 
+" of variable names
+set iskeyword-=_ 
+
+
 " Better tabcompletion
 set wildmenu
 
@@ -165,3 +170,13 @@ let g:jsx_ext_required = 0
 set encoding=utf8
 set guifont=DroidSansMonoPLNerd:h12
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+
+" terraform syntax configuration
+let g:terraform_align=1
+let g:terraform_remap_spacebar=1
+
+" Set all swap files to save in vim directory
+set backupdir=~/.vim/backup_files//
+set directory=~/.vim/swap_files//
+set undodir=~/.vim/undo_files//
+

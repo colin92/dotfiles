@@ -3,6 +3,7 @@
 
 export PGDATA=/usr/local/var/postgres
 
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/git/bin
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/utilities
@@ -11,7 +12,7 @@ export PYTHONPATH=$PYTHONPATH:/Users/colinmeret/anaconda/lib/python2.7/site-pack
 export PYTHONSTARTUP=$HOME/.startup_script.py
 
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/Cellar/vim/8.0.1450_1/bin/vim
 
 export NODE_ENV='local'
 
@@ -97,3 +98,5 @@ export PATH="/Users/colinmeret/anaconda/bin:$PATH"
 
 # Start up docker-machine on startup
 # if not docker variable, start up docker-machine restart default, then eval $(docker-machine env)
+
+alias gam="/Users/colinmeret/bin/gam/gam"

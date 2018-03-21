@@ -22,7 +22,7 @@ ln -s ~/dotfiles/.bash_profile .bash_profile
 echo "Installing vim plugins..."
 
 cp -r ~/dotfiles/.vim ~/.vim
-mkdir -p ~/.vim/autoload ~/.vim/bundle
+mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/swap_files ~/.vim/backup_files ~/.vim/undo_files
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/nerdtree-git-plugin

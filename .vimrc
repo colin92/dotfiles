@@ -17,7 +17,7 @@ set colorcolumn=80
 
 " Add _ characters as word separater, useful for jumping in the middle 
 " of variable names
-set iskeyword-=_ 
+"set iskeyword-=_ 
 
 
 " Better tabcompletion
@@ -63,6 +63,8 @@ nnoremap <leader>y :call system('pbcopy', @@)<CR>
 " copy to system clipboard
 vnoremap <C-x> y:call system('pbcopy', @@)<CR>gv
 " do stuff ...
+" toggle wrap
+nnoremap <leader>w :set wrap!<CR>
 
 " Convenient commands
 
@@ -121,6 +123,11 @@ function! Uncomment()
   elseif ft == 'vim'
     silent s:^\"::g
   endif
+endfunction
+
+function! SaveMatchesAsList(registry, regex)
+  echom registry
+  echom a:regex
 endfunction
 
 " Syntastic config settings

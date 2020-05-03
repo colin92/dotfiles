@@ -29,6 +29,7 @@ git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/nerdt
 git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
 git clone https://github.com/flazz/vim-colorschemes.git ~/.vim/bundle/vim-colorschemes
 git clone https://github.com/chr4/nginx.vim.git ~/.vim/bundle/nginx.vim
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 
 echo "You're all ready to go!"
 
